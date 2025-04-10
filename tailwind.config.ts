@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,12 +19,38 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				serif: ['Lora', 'serif'],
+				tamil: ['Hind Madurai', 'sans-serif']
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				// Tamil-inspired color palette
+				'tamil-blue': {
+					light: '#5C6BC0',
+					DEFAULT: '#3F51B5',
+					dark: '#1A237E',
+				},
+				'tamil-gold': {
+					light: '#FFF176',
+					DEFAULT: '#FFD700',
+					dark: '#F9A825',
+				},
+				'tamil-red': {
+					light: '#E57373',
+					DEFAULT: '#C62828',
+					dark: '#B71C1C',
+				},
+				'tamil-earth': {
+					light: '#D7CCC8',
+					DEFAULT: '#A1887F',
+					dark: '#5D4037',
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -52,16 +79,6 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
